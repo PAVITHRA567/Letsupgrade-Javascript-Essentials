@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ASSIGNMENT DAY 1</title>
+</head>
+
+<body>
+<h2>Question 1</h2>
+<p>Various methods in console function</p>
+<script>
+    /*The console.log() method writes a message to the console.
+
+The console is useful for testing purposes.*/
+console.log('abc');  
+console.log(1); 
+console.log(true); 
+console.log(null); 
+console.log(undefined);  
+console.log([1, 2, 3, 4]); // array inside log 
+console.log({a:1, b:2, c:3}); // object inside log 
+
+// console.error() method  
+//The console.error() method writes an error message to the console.
+console.error('This is a simple error');  
+
+// console.warn() method  
+//The console.warn() method writes a warning to the console.
+console.warn('This is a warning.');
+
+// console.clear() method  
+//The console.clear() method clears the console
+//The console.clear() method will also write a message in the console: "Console was cleared".
+console.clear(); 
+
+// console.time() and console.timeEnd() method 
+/*The console.time() method starts a timer in the console view.
+This method allows you to time certain operations in your code for testing purposes.
+Use the console.timeEnd() method to end the timer and display the result in the console.view.
+Use the label parameter to name the timer, then you are able to have many timers on the same page.*/
+console.time('abc'); 
+ let fun =  function(){ 
+     console.log('fun is running'); 
+ } 
+ let fun2 = function(){ 
+     console.log('fun2 is running..'); 
+ } 
+ fun(); // calling fun(); 
+ fun2(); // calling fun2(); 
+console.timeEnd('abc');
+
+// console.table() method 
+/*The console.table() method writes a table in the console view.
+The first parameter is required, and must be either an object, or an array, containing data to fill the table.*/
+console.table({"name":"pavithra", "place":"banglore"});  
+
+
+// console.count() method 
+/*Writes to the console the number of times that particular console.count() is called.
+You can add a label that will be included in the console view. By default the label "default" will be added.
+See more examples in the bottom of this page.*/
+for(let i=0;i<5;i++)
+{ 
+    console.count(i); 
+} 
+
+// console.group()
+/*The console.group() method indicates the start of a message group.
+All messages will from now on be written inside this group.*/
+console.log("Hello world!");
+console.group();
+console.log("Hello again, this time inside a group!");
+
+//console.groupCollapsed() Method
+//The console.groupCollapsed() method indicates the start of a collapsed message group.
+console.log("Hello world!");
+console.groupCollapsed();
+console.log("Hello again, this time inside a collapsed group!");
+
+//console.groupEnd() method 
+//The console.groupEnd() method indicates the end of a message group.
+console.log("Hello world!");
+console.group();
+console.log("Hello again, this time inside a group!");
+console.groupEnd();
+console.log("and we are back.");
+
+//console.trace() Method
+//The console.trace() method displays a trace that show how the code ended up at a certain point.
+function myFunction() {
+    myOtherFunction();
+  }
+  
+  function myOtherFunction() {
+    console.trace();
+  }
+
+  //console.info() Method
+  //The console.info() method writes a message to the console.
+  console.info("Hello letsupgrade");
+</script>    
+
+<h2>Question 2</h2>
+<p>write the difference between var,let and const with code examples</p>
+<p>var: The scope of a variable defined with the keyword “var” is limited 
+   to the “function” within which it is defined. If it is defined outside
+    any function, the scope of the variable is global.
+    var is “function scoped”.</p>
+<p>const: The scope of a variable defined with the keyword “const” is 
+    limited to the block defined by curly braces. However if a variable
+     is defined with keyword const, it cannot be reassigned.
+    “const” cannot be re-assigned to a new value. However it CAN be mutated.</p>
+<p>var and let are both used for variable declaration in javascript but the difference between them is that var is function scoped and let is block scoped.
+    It can be said that a variable declared with var is defined throughout the program as compared to let.<p>
+<p> example of var</p>
+<script>
+console.log(x);
+var x=5;
+console.log(x);
+</script>
+<p> example of let</p>
+<script>
+    var x = 10;
+// Here x is 10
+{
+  let x = 2;
+  console.log(x)
+}
+console.log(x);
+</script>
+
+<p> example of const</p>
+<script>
+    var x = 10;
+// Here x is 10
+{
+  const x = 2;
+  console.log(x);
+  //here x is 2
+}
+console.log(x);
+//Here x is 10
+</script>
+
+<h2>Question 3</h2>
+<p> write a brief introduction on data types in javascript</p>
+<p>String : represents textual data <br>
+Number : an integer or floating point Number <br>
+Boolean : Any of the two values True or False <br>
+Undefined : a data type whose variable is not initialized <br>
+Null : special keyword denoting a null value <br>
+Object : key-value pairs of collection of data <br>
+Arrays : Collection of objects
+</p>
+</body>
+
+
+
+
+</html>
