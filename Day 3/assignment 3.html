@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js assignment</title>
+</head>
+<body>
+    <h> Question 1</h>
+    <p>Take a number from a user and write a function which checks whwther the number is even or odd.assign the result to variabke and log that variabke the console</p>
+    <script>
+        let number = Number(prompt("Enter a  number: "));
+        let string;
+        if(+number % 2 == 0)
+        {
+            string = "even";
+        }
+        else{
+            string = "odd";
+        }
+        console.log(`The number entered is ${number} and  is ${string}`);
+    </script>
+
+    <h> question 2</h>
+    <p>write a program which will take OS name and version from the user separated by space.then log the OS name and version on the console. </p>
+<script>
+     let version = prompt("Enter OS name and version seprated by space.");
+        console.log(`The OS name is ${version.split(" ")[0]} and version is ${version.split(" ")[1]}`);
+</script>
+
+<h> Question 3</h>
+<p> write a program to take marks as input from the user and grade him accordingly.use conditional statement.also the same code using switch or ternary</p>
+<script>
+    let marks = prompt("Enter your marks.");
+            /* Using nested if-else */
+        
+            let grade;
+            if(+marks > 90){
+                grade = "A+";
+            }else if(+marks > 80){
+                grade = "A";
+            }else if(+marks > 70){
+                grade = "B+";
+            }else if(+marks > 60){
+                grade = "C";
+            }else if(+marks > 50){
+                grade = "D";
+            }else if(+marks > 40){
+                grade = "E";
+            }else if(+marks > 0)
+                grade = "Fail";
+            else{
+                grade = "Incorrect marks."
+            }
+
+        console.log(`Marks are ${marks} and grade is ${grade}.`); 
+
+        /* Using ternary operator. */
+        grade = (+marks > 80) ? "A" : (+marks > 70) ? "B" : (+marks > 60) ? "C": (+marks > 50) ? "D" : (+marks > 40) ? "E" : "Fail" ;
+        console.log(`Marks are ${marks} and grade is ${grade}.`); 
+
+        /*Using Switch case */
+
+       switch(true){
+            case (+marks > 80) :
+                grade = "A";
+                break;
+            case (+marks > 70) :
+                grade = "B";
+                break;
+            case (+marks > 60) :
+                grade = "C";
+                break;
+            case (+marks > 50) :
+                grade = "D";
+                break;
+            case (+marks > 40) : 
+                grade = "E";
+                break;
+            case (+marks > 0) :
+                grade = "Fail";
+                break;
+            default:
+                grade = "Incorrect value."
+        }
+        console.log(`Marks are ${marks} and grade is ${grade}.`); 
+
+</script>
+</body>
+</html>
